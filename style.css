@@ -1,0 +1,1018 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap')
+:root{
+	--gold:#d4af37;
+	--black: #0c0c0b;
+	--white: #Fbf8ed;
+	--light-color: #BF9b30;
+	--light-bg: #eee;
+	--box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+	--boder:.1rem solid rgba(0,0,0,.3);
+}
+
+*{
+	font-family: 'Playfair', sans-serif;
+	margin:0; padding: 0;
+	border: none;
+	box-sizing: border-box;
+	outline: none;  
+    color: #0c0c0b;
+    --green: rgb(1, 65, 48);
+    --light-green: 	rgb(66, 169, 2);
+    --black: #0c0c0b;
+	--white: #FFFFFF;
+    --box-shadow:0 .5rem 1rem rgba(0,0,0,0.2);
+    --box-shadow-hover: 0 .5rem 1rem rgba(0,0,0,0.6);
+}
+
+
+html{
+	font-size: 62.5%;
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+	scroll-padding-top: 7rem;
+
+	&::-webkit-scrollbar{
+		width:1rem;  
+	}
+
+	&::-webkit-scrollbar-track{
+		background:var(--green);
+	}
+		&::-webkit-scrollbar-thumb{
+		background: var(--light-green);
+	}
+}
+
+
+.heading{
+    font-style: bold;
+    line-height: 3rem;
+    color: var(--white);
+    margin-bottom: 1rem;
+	font-size: 3rem;
+    text-transform: uppercase;
+	padding-left: 1rem;
+}
+
+
+.sub-heading{
+    font-style: bold;
+    line-height: 1.5rem;
+    color: var(--green);
+    margin-bottom: 1.5rem;
+	font-size: 1.5rem;
+    text-transform: capitalize;
+	padding-left: 1rem;
+}
+
+.btn{
+	display: inline-block;
+	margin-top: 1rem;
+	padding: 1rem 3rem;
+	background: var(--green);
+	border-radius: 2rem;
+	color: var(--white);
+	cursor: pointer;
+	font-size: 1.7rem;
+	text-transform: capitalize;
+	transition: all .2s linear;
+    box-shadow: var(--box-shadow);
+
+    &:hover{
+        background-color: white;
+        color: var(--light-green);
+        box-shadow: var(--box-shadow-hover);
+    }
+}
+
+
+
+/* ----------------------------
+            Header Style
+----------------------------------- */
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    background: var(--white);
+    position: sticky;
+    height: 60px;
+    z-index: 999;
+    width: 100%;
+    top: 0; left: 0;
+    box-shadow:0 .5rem 1rem rgba(0,0,0,0.06);
+    padding: 20px 80px;
+}
+.header .logo-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ }
+  
+  .header .logo-container .Logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header .logo-container .Logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+  
+  .header .logo-container .Logo img {
+    margin-right: 10px;
+  }
+  
+  .header .logo-container .Logo span {
+    font-weight: bold;
+    color: var(--green);
+    font-size: 20px;
+    font-weight: 700;
+    font-style: italic;
+
+    &:hover{
+        color: var(--light-green);
+    }
+  }
+#navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#navbar ul{
+    position: relative;
+}
+#navbar li{
+    list-style: none;
+    padding: 0 20px;
+}
+#navbar li a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--green);
+}
+
+#navbar li a:hover{
+    color: var(--light-green);
+}
+
+#navbar li a.active{
+    color: var(--light-green);
+}
+#navbar li a {
+    position: relative;
+}
+
+#navbar li a::after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    width: 50%;
+    height: 2px;
+    background-color: var(--green);
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+#navbar li a:hover::after,
+#navbar li a.active::after {
+    bottom: -5px;
+    opacity: 1;
+}
+
+ #close-btn{
+    display: none;
+}
+
+.icons div{
+    display: inline-block;
+
+    i{
+        height: 5rem;
+        width: 5rem;
+        display: flex;
+        line-height: 5rem;
+        font-size: 2rem;
+        color: var(--green);
+        cursor: pointer;
+        text-align: center;
+        margin-left: .3rem;
+
+        &:hover{
+            color: var(--light-green);
+        }
+    }
+}
+#menu-btn{
+    display: none;
+}
+
+/* ----------------------------
+Header Style
+----------------------------------- */
+
+/* Hero Style Starts */
+
+.hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/home.jpg);
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    filter: blur(0.5px);
+    background-position: top 40% right 0;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    .col {
+        width: 50%;
+    }
+}
+
+/* Hero style Ends */
+
+/* Why Choose us style Starts */
+
+.do-container {
+    background-image: linear-gradient(to right, #a9bd9d, #b3dd9a, #42a902);
+    padding-left: 5%;
+    padding-right: 5%;
+    display: flex;
+    gap: 4rem;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+  
+  .row {
+    display: flex;
+    height: 90%;
+    flex-direction: row;
+  }
+  
+  .col {
+    flex: 1;
+    padding: 20px;
+  }
+  .col-1{
+    margin-top: 70px;
+    align-items: center;
+    justify-content: center;
+
+    .head h1{
+        padding-bottom: 10px;
+        font-size: 5rem;
+    }
+
+    p{
+        font-size: 2rem;
+        padding-bottom: 10px;
+    }
+}
+  
+  .col-2 {
+    display: flex;
+    margin-top: 10px;
+    flex-direction: row;
+    border-radius: 40px;
+    background-color: var(--white);
+    justify-content: space-between;
+    box-shadow: var(--box-shadow-hover);
+
+    &:hover{
+        box-shadow: rgba(0,0,0,0.8);
+    }
+  }
+
+  .col1{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: space-between;
+
+    h2{
+        font-size: 2rem;
+        color: var(--green);
+        text-align: center;
+        text-transform: uppercase;
+    }
+  } 
+  .flex {
+        margin: 0 10px;
+        h3{
+            font-size: 1.5rem;
+            padding-bottom: 3px;
+            text-transform: capitalize;
+        }
+        p{
+            font-size: 1.3rem;
+            color: #41413d;
+        }
+    }
+}
+/* Why Choose us style Ends */
+
+
+/* About Us */
+#brand-head{
+    display: flex;
+    align-items: center;
+    height: 80vh;
+    margin: 5% 5%;
+    img{
+        width: 50%;
+        height: auto;
+        border-radius: 20px;
+        border: 2px inset var(--blue);
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.4);
+        transition: all 0.5s ease-in-out;
+
+        &:hover{
+            box-shadow: 0 .5rem 1rem rgba(0,0,0,.8);
+        }
+    }
+
+    div{
+        padding-left: 40px;
+
+        .heading{
+            color: var(--green);
+        }
+        
+        p{
+            color: var(--green);
+            font-size: 1.7rem;
+            line-height: 2rem;
+            font-weight: 400;
+            margin-bottom: 15px;
+        }
+    }
+
+}
+/* About Us */
+
+
+
+
+/* Services And Products */
+.container {
+    padding: 5% 8%;
+    /* background:url(images/blur-background.jpg); */
+    background-size: cover;
+    background-position: top 60% right 0;
+
+    .service-container {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+
+        .content {
+            /* display: block; */
+            width: 50%; 
+            cursor: pointer;
+
+            .heading{
+                color: var(--green);
+            }
+
+
+            .line {
+                border: 1px solid var(--light-green);
+                border-radius: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 10px;
+                margin-bottom: 10px; 
+
+                h1 {
+                    font-size: 2rem;
+                    color: var(--green);
+                    text-align: left;
+                }
+
+                i {
+                    font-size: 1.5rem;
+                    color: var(--light-green);
+                }
+            }
+        }
+
+        .image {
+            position: relative;
+            width: 50%;
+            max-width: 500px; 
+
+            img {
+                width: 100%;
+                height: auto;
+                display: block;
+                border-radius: 10px;
+            }
+
+            .content {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                padding: 20px;
+                box-sizing: border-box;
+                background-color:rgb(66, 169, 2,0.4);
+                border-radius: 0 0 10px 10px;
+                transition: .6s ease-out;
+                color: whitesmoke;
+
+                &:hover{
+                background-color:rgb(66, 169, 2,0.8);
+                }
+
+                h3 {
+                    font-size: 2rem;
+                }
+
+                p {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+    
+
+    .product-container {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+
+        .content {
+            display: block;
+            width: 50%; 
+
+            .heading{
+                color: var(--green);
+            }
+
+            .list {
+               
+                display: flex;
+                align-items: center;
+                justify-content: left;
+                padding: 10px;
+                margin-bottom: 10px; 
+
+                ul{
+                    list-style-type: circle;
+
+                    li{
+                        font-size: 2rem;
+                        color: var(--green);
+                    }
+                }
+
+            }
+        }
+        button{
+            margin: 20px;
+        }
+
+        .image {
+            position: relative;
+            width: 50%;
+            max-width: 500px; 
+
+            img {
+                width: 100%;
+                height: auto;
+                display: block;
+                border-radius: 10px;
+            }
+
+            .content {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                padding: 20px;
+                box-sizing: border-box;
+                background-color:rgb(66, 169, 2,0.4);
+                border-radius: 0 0 10px 10px;
+                transition: .6s ease-out;
+                color: whitesmoke;
+
+                &:hover{
+                background-color:rgb(66, 169, 2,0.8);
+                }
+
+                h3 {
+                    font-size: 2rem;
+                }
+
+                p {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+}
+
+/* Services And Products */
+
+
+/* 
+---------------------------------------------
+Service Page Style
+--------------------------------------------- 
+*/
+
+/* Service Hero Style Starts */
+
+.service-hero{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/Service.jpg);
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    filter: blur(0.5px);
+    background-position: top 40% right 0;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    .col{
+        width: 50%;
+    }
+}
+
+/* Service Hero style Ends */
+
+
+/* Products style */
+
+.electric-container{
+    background-color: #eeeaea;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+
+    .electric-content{
+        padding: 5px 10px;
+        margin: 30px 10px 30px 10px;
+        align-items: center;
+        justify-content: center;  
+
+        h1{
+            padding-top: 10px;
+            color: var(--green);
+            text-align: center;
+        }
+
+        p{
+            color: var(--black);
+            font-weight: 400;
+            font-style: oblique;
+            font-size: 2rem;
+        }
+    }
+
+    .electric-product-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        margin: 5px auto;
+
+        .electric-product{
+            display: flex;
+            flex-direction: column;
+            margin: 5px auto;
+            padding:5px 5px;
+            border-radius: 30px;
+            align-items: center;
+            justify-content: space-between;
+
+            &:hover{
+                color: var(--green);
+                box-shadow: var(--box-shadow-hover);
+                background-color: white;
+            }
+
+            img {
+                width: 100%;
+                height: 250px;
+                object-fit: cover; /* Cover the entire container with the image */
+                border-radius: 30px;
+                margin-bottom: 3px; /* Add some space between image and text */
+            }
+
+            h1 {
+                font-size: 2rem;
+                font-weight: bold;
+                text-align:center;
+                padding-top: 20px;
+            }
+
+            p {
+                font-size: 1.5rem;
+                text-align: center;
+                font-weight: 500;
+            }
+            button{
+                display: inline-block;
+                margin-top: 1rem;
+                padding: 1rem 3rem;
+                background: #014130;
+                border-radius: 2rem;
+                color: var(--white);
+                cursor: pointer;
+                font-size: 1.7rem;
+
+            }
+        }
+    }
+}
+
+/* 
+---------------------------------------------
+Service Page Style
+--------------------------------------------- 
+*/
+
+
+
+
+
+
+/* 
+---------------------------------------------
+Contact Page Style
+--------------------------------------------- 
+*/
+
+/* Contact Hero Style Starts */
+
+.contact-hero{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/contact.jpg);
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    filter: blur(0.5px);
+    background-position: top 40% right 0;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    .col{
+        width: 50%;
+    }
+}
+
+/* Contact Hero style Ends */
+
+
+.contact-container{
+    display: flex;
+    padding-left: 6%;
+    padding-right: 6%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    height: 100vh;
+    background-color: var(--green);
+    box-sizing: border-box;
+
+    .map {
+        width: 50%;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        margin: 0px 0px 10px 50px;
+        background-color: var(--white);
+        padding: 10px;
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+        }
+    }
+
+    form#contact {
+        padding: 20px;
+        margin: 0px 50px 10px 0px;
+        background-color: var(--white);
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+    
+        input {
+            width: 100%;
+            height: 45px;
+            border-radius: 7px;
+            background-color: transparent;
+            border: 1px solid #b3dd9a;
+            outline: none;
+            font-size: 15px;
+            font-weight: 300;
+            color: var(--green);
+            padding: 0px 15px;
+            margin-bottom: 17px;
+        }
+          
+         ul li {
+            display: inline-block;
+            margin-right: 30px;
+          }
+          
+        form#contact ul li:last-child {
+            margin-right: 0px;
+        }
+          
+       input[type=checkbox] {
+            display: inline-block;
+            width: 15px;
+            min-width: 15px;
+            height: 15px;
+            background-color: transparent;
+            border: 1px solid var(--black);
+            outline: none;
+            cursor: pointer;
+        }
+          
+       span {
+            color: var(--light-green);
+            font-size: 14px;
+            font-weight: 500;
+            margin-left: 8px;
+        }
+          
+        input::placeholder {
+            color: var(--light-green);
+            font-weight: 500;
+        }
+          
+        textarea {
+            margin-top: 10px;
+            width: 100%;
+            min-width: 100%;
+            max-width: 100%;
+            max-height: 180px;
+            min-height: 140px;
+            height: 140px;
+            border-radius: 7px;
+            background-color: transparent;
+            border: 1px solid #b3dd9a;
+            outline: none;
+            font-size: 15px;
+            font-weight: 300;
+            color: var(--green);
+            padding: 15px;
+            margin-bottom: 30px;
+    
+            &::placeholder {
+                color: var(--light-green);
+                font-weight: 500;
+            }
+    
+        }
+          
+        button {
+            margin-bottom: 10px;
+            display: inline-block;
+            background-color: var(--light-green);
+            font-size: 15px;
+            font-weight: 400;
+            color: #fff;
+            text-transform: capitalize;
+            padding: 12px 25px;
+            border-radius: 7px;
+            letter-spacing: 0.25px;
+            border: none;
+            outline: none;
+            transition: all .3s;
+            box-shadow: var(--box-shadow);
+        
+            &:hover{
+                background-color: var(--white);
+                color: var(--light-green);
+                box-shadow: var(--box-shadow-hover);
+            }
+        
+            i {
+                margin-right: 10px;
+                width: 24px;
+                height: 24px;
+                background-color: var(--white);
+                color: var(--light-green);
+                border-radius: 50%;
+                display: inline-block;
+                text-align: center;
+                font-size: 12px;
+                line-height: 24px;
+              }
+        }
+    }
+}
+
+
+
+  
+/* 
+---------------------------------------------
+Contact Page Style
+--------------------------------------------- 
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------------------------
+    Media Query 
+--------------------------------*/
+
+@media (max-width:1200px){
+    .header{
+        padding:1.5rem 2rem;
+    }
+
+    section{
+		padding: 3rem 5%;
+	}
+}
+
+@media (max-width:600px){
+    html{
+        font-size: 50%;
+    } 
+
+    /* What we do*/
+    .do-container .row {
+      display: block !important; 
+      padding: 0 10%;
+    }
+
+    .col-2{
+        display: block !important;
+        margin-bottom: 20px;
+
+        .col1 .head{
+            margin-top: 10px;
+        }
+    }
+    /* What we do*/
+
+
+    /* Service and Product style */
+    .container {
+        padding-inline: auto ;
+
+        .service-container {
+            flex-direction: column;
+            .content {
+                width: 100%; 
+            }
+
+            .image{
+                display: block;
+                width: 100%;
+                max-width: 500px;
+                margin-top: 20px;
+            }
+        }
+
+        .product-container {
+            flex-direction: column;
+
+            .heading2{
+                font-size: 2.5rem;
+                text-align: left;
+            }
+            .content {
+                width: 100%; 
+            }
+
+            .image{
+                display: block;
+                width: 100%;
+                max-width: 500px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+    
+    /* Drone & Survey style */
+}
+
+@media (max-width:991px){
+
+    #navbar{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0; right: -300px;
+        height: 100vh;
+        width: 300px;
+        background-color: #Fbf8ed;
+        box-shadow: 0 40px 60px rgba(0,0,0,.1);
+        padding: 80px 0 0 10px;
+        transition: .3s;
+        li{
+            margin-bottom: 25px;
+        }
+    }
+    #navbar.active{
+        right: 0px;
+    }
+
+    #menu-btn{
+        display: inline-block;
+    }
+
+    #navbar #close-btn{
+        display: initial;
+        position: absolute;
+        top: 10px; 
+        left: 10px;
+        color: #0c0c0b;
+        margin-bottom: 20px;
+        font-size: 50px;
+    }
+
+
+    /* ---------------------------
+   Contact Page
+    --------------------------------*/
+
+  .contact-container{
+   flex-direction: column;
+   height: auto;
+
+    .map {
+        width: 90%;
+        border-radius: 20px;
+        margin: 0px 0px 10px 10px;
+        background-color: var(--white);
+        padding: 10px;
+
+        iframe {
+            border-radius: 20px;
+        }
+    }
+
+    form#contact {
+        /* padding: 10px; */
+        border-radius: 20px;
+        margin: 0px 0px 0px 10px;
+        width: 90%;
+        background-color: var(--white);
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+  }
+   /* ---------------------------
+   Contact Page
+  --------------------------------*/
+}
+
+@media (max-width:900px){
+ 
+ /* Products */
+ .electric-product-container{
+    flex-wrap: wrap;
+    }
+ /* Products */
+}
+
+
+@media (max-width:425px){
+    
+    /* Our Products */
+    .electric-product-container{
+        display: block !important;
+    }
+    /* Our Products */
+}
+
+/* ---------------------------
+    Media Query 
+--------------------------------*/
