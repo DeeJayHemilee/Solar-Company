@@ -1,18 +1,16 @@
-const bar = document.getElementById('menu-btn');
-const close = document.getElementById('close-btn');
-const nav = document.getElementById('navbar');
-const searchIcon = document.querySelector(".fa-multiply");
-const searchBtn = document.querySelector('.searchBtn');
-const closeSearch = document.querySelector('.search-toggle');
-const searchBox = document.querySelector('.search-box');
+document.addEventListener('DOMContentLoaded', () => {
+    const bar = document.getElementById('menu-btn');
+    const close = document.getElementById('close-btn');
+    const nav = document.getElementById('navbar');
 
-if (bar) {
-    bar.addEventListener('click', () =>{
-        nav.classList.add('active');
-    })
-}
-if (close) {
-    close.addEventListener('click', () =>{
-        nav.classList.remove('active');
-    })
-}
+    if (bar) {
+        bar.addEventListener('click', () => {
+            nav.classList.add('active');
+        });
+    }
+    if (close) {
+        close.addEventListener('click', () => {
+            nav.classList.remove('active');
+        });
+    }
+});

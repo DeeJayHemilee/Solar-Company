@@ -14,11 +14,13 @@
 	margin:0; padding: 0;
 	border: none;
 	box-sizing: border-box;
-	outline: none;  
+    outline: none;  
+    text-decoration: none; 
     color: #0c0c0b;
-    --green: rgb(1, 65, 48);
-    --light-green: 	rgb(66, 169, 2);
-    --black: #0c0c0b;
+    --cyan: rgb(0, 153, 153);
+    --light-green: 	rgb(153, 204, 51);
+    --black: rgb(51, 51, 51);
+    --grey: rgb(153, 153, 153);
 	--white: #FFFFFF;
     --box-shadow:0 .5rem 1rem rgba(0,0,0,0.2);
     --box-shadow-hover: 0 .5rem 1rem rgba(0,0,0,0.6);
@@ -36,10 +38,10 @@ html{
 	}
 
 	&::-webkit-scrollbar-track{
-		background:var(--green);
+		background:var(--light-green);
 	}
 		&::-webkit-scrollbar-thumb{
-		background: var(--light-green);
+		background: var(--cyan);
 	}
 }
 
@@ -58,7 +60,7 @@ html{
 .sub-heading{
     font-style: bold;
     line-height: 1.5rem;
-    color: var(--green);
+    color: var(--light-green);
     margin-bottom: 1.5rem;
 	font-size: 1.5rem;
     text-transform: capitalize;
@@ -67,21 +69,33 @@ html{
 
 .btn{
 	display: inline-block;
-	margin-top: 1rem;
+	margin-top: 0rem;
 	padding: 1rem 3rem;
-	background: var(--green);
+	background: var(--light-green);
 	border-radius: 2rem;
 	color: var(--white);
 	cursor: pointer;
-	font-size: 1.7rem;
+	font-size: 2rem;
 	text-transform: capitalize;
 	transition: all .2s linear;
     box-shadow: var(--box-shadow);
 
     &:hover{
-        background-color: white;
-        color: var(--light-green);
+        background-color: var(--white);
+        color: var(--cyan);
         box-shadow: var(--box-shadow-hover);
+    }
+
+    i{
+        margin-right: 10px;
+        width: 24px;
+        height: 24px;
+        color: var(--cyan);
+        border-radius: 50%;
+        display: inline-block;
+        text-align: center;
+        font-size: 2rem;
+        line-height: 24px;
     }
 }
 
@@ -126,13 +140,13 @@ html{
   
   .header .logo-container .Logo span {
     font-weight: bold;
-    color: var(--green);
+    color: var(--light-green);
     font-size: 20px;
     font-weight: 700;
     font-style: italic;
 
     &:hover{
-        color: var(--light-green);
+        color: var(--cyan);
     }
   }
 #navbar{
@@ -151,15 +165,15 @@ html{
     text-decoration: none;
     font-size: 16px;
     font-weight: 600;
-    color: var(--green);
+    color: var(--light-green);
 }
 
 #navbar li a:hover{
-    color: var(--light-green);
+    color: var(--cyan);
 }
 
 #navbar li a.active{
-    color: var(--light-green);
+    color: var(--cyan);
 }
 #navbar li a {
     position: relative;
@@ -172,7 +186,7 @@ html{
     left: 0;
     width: 50%;
     height: 2px;
-    background-color: var(--green);
+    background-color: var(--light-green);
     opacity: 0;
     transition: all 0.3s ease-in-out;
 }
@@ -196,19 +210,21 @@ html{
         display: flex;
         line-height: 5rem;
         font-size: 2rem;
-        color: var(--green);
+        color: var(--light-green);
         cursor: pointer;
         text-align: center;
         margin-left: .3rem;
 
         &:hover{
-            color: var(--light-green);
+            color: var(--cyan);
         }
     }
 }
 #menu-btn{
     display: none;
 }
+
+
 
 /* ----------------------------
 Header Style
@@ -230,7 +246,7 @@ Header Style
     justify-content: center;
 
     .col {
-        width: 50%;
+        width: 60%;
     }
 }
 
@@ -239,7 +255,7 @@ Header Style
 /* Why Choose us style Starts */
 
 .do-container {
-    background-image: linear-gradient(to right, #a9bd9d, #b3dd9a, #42a902);
+    background-image: linear-gradient(to right, var(--black), var(--grey), var(--light-green));
     padding-left: 5%;
     padding-right: 5%;
     display: flex;
@@ -297,7 +313,7 @@ Header Style
 
     h2{
         font-size: 2rem;
-        color: var(--green);
+        color: var(--light-green);
         text-align: center;
         text-transform: uppercase;
     }
@@ -307,6 +323,7 @@ Header Style
         h3{
             font-size: 1.5rem;
             padding-bottom: 3px;
+            color: var(--cyan);
             text-transform: capitalize;
         }
         p{
@@ -314,46 +331,47 @@ Header Style
             color: #41413d;
         }
     }
-}
+    }
 /* Why Choose us style Ends */
 
 
 /* About Us */
-#brand-head{
+#brand-head {
     display: flex;
     align-items: center;
     height: 80vh;
     margin: 5% 5%;
-    img{
+
+    img {
         width: 50%;
         height: auto;
         border-radius: 20px;
         border: 2px inset var(--blue);
-        box-shadow: 0 .5rem 1rem rgba(0,0,0,.4);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .4);
         transition: all 0.5s ease-in-out;
 
-        &:hover{
-            box-shadow: 0 .5rem 1rem rgba(0,0,0,.8);
+        &:hover {
+            box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .8);
         }
     }
 
-    div{
+    div {
         padding-left: 40px;
 
-        .heading{
-            color: var(--green);
+        .heading {
+            color: var(--light-green);
         }
-        
-        p{
-            color: var(--green);
+
+        p {
+            color: var(--cyan);
             font-size: 1.7rem;
             line-height: 2rem;
             font-weight: 400;
             margin-bottom: 15px;
         }
     }
-
 }
+
 /* About Us */
 
 
@@ -379,7 +397,7 @@ Header Style
             cursor: pointer;
 
             .heading{
-                color: var(--green);
+                color: var(--light-green);
             }
 
 
@@ -456,7 +474,7 @@ Header Style
             width: 50%; 
 
             .heading{
-                color: var(--green);
+                color: var(--light-green);
             }
 
             .list {
@@ -553,6 +571,79 @@ Service Page Style
 
 /* Service Hero style Ends */
 
+.service{
+    padding-top: 5%;
+    background-color: rgba(153, 204, 51, 0.822);
+    height: 80vh;
+
+    .heading{
+        font-weight: 700;
+        font-size: clamp(20px, 5vw, 40px);
+        text-align: center;
+        text-transform: capitalize;
+        margin-bottom: 20px;
+    }
+
+    .service-cards{
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       
+
+       .single-service{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-inline: 1em;
+            color: var(--cyan);
+            margin-top: 2em;
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: var(--box-shadow);
+
+            &:hover {
+                transition: transform 0.5s ease-in-out;
+                box-shadow: var(--box-shadow-hover);
+                background-color: rgba(0, 153, 153, 0.589);
+                border: 2px solid var(--light-green);
+        
+                &:hover{
+                     transform: translateY(-10px);
+                }
+            }
+
+            .service-heading{
+                font-weight: 900;
+                color: var(--light-green);
+                margin-top: 1em;
+                text-transform: capitalize;
+                font-size: clamp(20px, 5vw, 1);
+            }
+
+            i{
+                margin: 2em;
+                font-size: 2rem;
+                color: var(--green);
+            }
+            
+            .service-details{
+                font-size: 1.1rem;
+                width: 80%;
+                text-align: center;
+                margin-bottom: 2em;
+                color: var(--green);
+            }
+        }
+
+        .single-service:hover .service-heading,
+        .single-service:hover i, 
+        .single-service:hover .service-details {
+            color: var(--white);
+        }
+    }
+}
+
 
 /* Products style */
 
@@ -572,7 +663,7 @@ Service Page Style
 
         h1{
             padding-top: 10px;
-            color: var(--green);
+            color: var(--light-green);
             text-align: center;
         }
 
@@ -600,17 +691,17 @@ Service Page Style
             justify-content: space-between;
 
             &:hover{
-                color: var(--green);
+                color: var(--light-green);
                 box-shadow: var(--box-shadow-hover);
-                background-color: white;
+                background-color: var(--white);
             }
 
             img {
                 width: 100%;
                 height: 250px;
-                object-fit: cover; /* Cover the entire container with the image */
+                object-fit: cover; 
                 border-radius: 30px;
-                margin-bottom: 3px; /* Add some space between image and text */
+                margin-bottom: 3px; 
             }
 
             h1 {
@@ -618,18 +709,21 @@ Service Page Style
                 font-weight: bold;
                 text-align:center;
                 padding-top: 20px;
+                color: var(--light-green);
+                text-transform: capitalize;
             }
 
             p {
                 font-size: 1.5rem;
                 text-align: center;
                 font-weight: 500;
+                color: var(--black);
             }
             button{
                 display: inline-block;
                 margin-top: 1rem;
                 padding: 1rem 3rem;
-                background: #014130;
+                background: var(--light-green);
                 border-radius: 2rem;
                 color: var(--white);
                 cursor: pointer;
@@ -858,6 +952,159 @@ Contact Page Style
 	}
 }
 
+
+@media (max-width:991px){
+
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        height: 100vh;
+        width: 300px;
+        background-color: var(--white);
+        box-shadow: var(--box-shadow);
+        padding: 80px 20px 0 20px;
+        transition: right 0.3s ease-in-out;
+        z-index: 1000;
+    }
+
+    #navbar li {
+        margin-bottom: 20px;
+    }
+
+    #navbar li a {
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: var(--light-green);
+        text-decoration: none;
+        display: block;
+        padding: 10px 0;
+        transition: color 0.3s ease-in-out;
+    }
+
+    #navbar li a:hover {
+        color: var(--cyan);
+    }
+
+    #navbar.active {
+        right: 0px;
+    }
+
+    #menu-btn {
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    #navbar #close-btn {
+        display: block;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        color: var(--green);
+        font-size: 2.5rem;
+        cursor: pointer;
+    }
+
+
+
+    /* ---------------------------
+   Service Page
+    --------------------------------*/
+    .service{
+        height: auto;
+    }
+
+        /* ---------------------------
+   Service Page
+    --------------------------------*/
+
+
+
+    /* ---------------------------
+   Contact Page
+    --------------------------------*/
+
+  .contact-container{
+   flex-direction: column;
+   height: auto;
+
+    .map {
+        width: 90%;
+        border-radius: 20px;
+        margin: 0px 0px 10px 10px;
+        background-color: var(--white);
+        padding: 10px;
+
+        iframe {
+            border-radius: 20px;
+        }
+    }
+
+    form#contact {
+        /* padding: 10px; */
+        border-radius: 20px;
+        margin: 0px 0px 0px 10px;
+        width: 90%;
+        background-color: var(--white);
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+  }
+   /* ---------------------------
+   Contact Page
+  --------------------------------*/
+}
+
+@media (max-width:900px){
+ 
+ /* Products */
+ .electric-product-container{
+    flex-wrap: wrap;
+    }
+ /* Products */
+}
+
+@media (max-width: 768px) {
+    /* About us */
+    #brand-head {
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+
+        img {
+            width: 80%;
+            margin-bottom: 20px;
+        }
+
+        div {
+            padding-left: 0;
+
+            p {
+                font-size: 1.5rem;
+                line-height: 1.8rem;
+            }
+        }
+    }
+    /* About Us */
+
+
+    /* Service page */
+       .service-cards{
+        display: flex;
+        flex-direction: column;
+        margin-inline: 5%;
+    }
+    /* Service page */
+
+
+    
+}
+
+
 @media (max-width:600px){
     html{
         font-size: 50%;
@@ -921,90 +1168,25 @@ Contact Page Style
     /* Drone & Survey style */
 }
 
-@media (max-width:991px){
-
-    #navbar{
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        position: fixed;
-        top: 0; right: -300px;
-        height: 100vh;
-        width: 300px;
-        background-color: #Fbf8ed;
-        box-shadow: 0 40px 60px rgba(0,0,0,.1);
-        padding: 80px 0 0 10px;
-        transition: .3s;
-        li{
-            margin-bottom: 25px;
-        }
-    }
-    #navbar.active{
-        right: 0px;
-    }
-
-    #menu-btn{
-        display: inline-block;
-    }
-
-    #navbar #close-btn{
-        display: initial;
-        position: absolute;
-        top: 10px; 
-        left: 10px;
-        color: #0c0c0b;
-        margin-bottom: 20px;
-        font-size: 50px;
-    }
-
-
-    /* ---------------------------
-   Contact Page
-    --------------------------------*/
-
-  .contact-container{
-   flex-direction: column;
-   height: auto;
-
-    .map {
-        width: 90%;
-        border-radius: 20px;
-        margin: 0px 0px 10px 10px;
-        background-color: var(--white);
-        padding: 10px;
-
-        iframe {
-            border-radius: 20px;
-        }
-    }
-
-    form#contact {
-        /* padding: 10px; */
-        border-radius: 20px;
-        margin: 0px 0px 0px 10px;
-        width: 90%;
-        background-color: var(--white);
-        border-top-right-radius: 20px;
-        border-bottom-right-radius: 20px;
-    }
-  }
-   /* ---------------------------
-   Contact Page
-  --------------------------------*/
-}
-
-@media (max-width:900px){
- 
- /* Products */
- .electric-product-container{
-    flex-wrap: wrap;
-    }
- /* Products */
-}
-
 
 @media (max-width:425px){
+
+    /* About Us */
+    #brand-head {
+        margin: 5% 2%;
+
+        img {
+            width: 100%;
+        }
+
+        div {
+            p {
+                font-size: 1.3rem;
+                line-height: 1.6rem;
+            }
+        }
+    }
+    /* About us */
     
     /* Our Products */
     .electric-product-container{
