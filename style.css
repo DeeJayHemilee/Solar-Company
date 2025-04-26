@@ -1,16 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap')
-:root{
-	--gold:#d4af37;
-	--black: #0c0c0b;
-	--white: #Fbf8ed;
-	--light-color: #BF9b30;
-	--light-bg: #eee;
-	--box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
-	--boder:.1rem solid rgba(0,0,0,.3);
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 *{
-	font-family: 'Playfair', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	margin:0; padding: 0;
 	border: none;
 	box-sizing: border-box;
@@ -18,6 +9,7 @@
     text-decoration: none; 
     color: #0c0c0b;
     --cyan: rgb(0, 153, 153);
+    --yellow:rgb(252, 212, 10);
     --light-green: 	rgb(153, 204, 51);
     --black: rgb(51, 51, 51);
     --grey: rgb(153, 153, 153);
@@ -46,56 +38,85 @@ html{
 }
 
 
-.heading{
+
+h1{
     font-style: bold;
     line-height: 3rem;
+    font-weight: 900;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h2{
+    font-style: bold;
+    line-height: 2.5rem;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+}
+
+p{
+    font-style: bold;
+    line-height: 2.5rem;
+    font-weight:400;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+section{
+    padding: 7rem 5%;
+}
+
+
+.heading{
     color: var(--white);
     margin-bottom: 1rem;
 	font-size: 3rem;
     text-transform: uppercase;
-	padding-left: 1rem;
 }
 
 
 .sub-heading{
-    font-style: bold;
-    line-height: 1.5rem;
     color: var(--light-green);
     margin-bottom: 1.5rem;
-	font-size: 1.5rem;
+	font-size: 2rem;
     text-transform: capitalize;
-	padding-left: 1rem;
 }
 
-.btn{
-	display: inline-block;
-	margin-top: 0rem;
-	padding: 1rem 3rem;
-	background: var(--light-green);
-	border-radius: 2rem;
-	color: var(--white);
-	cursor: pointer;
-	font-size: 2rem;
-	text-transform: capitalize;
-	transition: all .2s linear;
-    box-shadow: var(--box-shadow);
 
-    &:hover{
+.btn {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    padding: 0.4em 0.9em;
+    border: 2px solid var(--light-green);
+    border-radius: 10px;
+    background-color: var(--light-green);
+    color: var(--white);
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+    text-align: center;
+
+    &:hover {
         background-color: var(--white);
-        color: var(--cyan);
+        color: var(--light-green);
+        border-color: var(--cyan);
         box-shadow: var(--box-shadow-hover);
     }
 
     i{
-        margin-right: 10px;
-        width: 24px;
-        height: 24px;
-        color: var(--cyan);
+        padding-right: 15px;
+        color: var(--white);
         border-radius: 50%;
         display: inline-block;
         text-align: center;
         font-size: 2rem;
-        line-height: 24px;
+    }
+
+    &:hover i{
+        color: var(--light-green);
+        transform: translateX(10px);
+        transition: all 0.3s ease-in-out;
     }
 }
 
@@ -115,7 +136,7 @@ html{
     width: 100%;
     top: 0; left: 0;
     box-shadow:0 .5rem 1rem rgba(0,0,0,0.06);
-    padding: 20px 80px;
+    padding: 20px 60px;
 }
 .header .logo-container {
     display: flex;
@@ -213,7 +234,7 @@ html{
         color: var(--light-green);
         cursor: pointer;
         text-align: center;
-        margin-left: .3rem;
+        margin-left: .4rem;
 
         &:hover{
             color: var(--cyan);
@@ -237,16 +258,35 @@ Header Style
     height: 100vh;
     width: 100%;
     background-size: cover;
-    filter: blur(0.5px);
-    background-position: top 40% right 0;
-    padding: 0 80px;
+    background-position: center;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
 
     .col {
-        width: 60%;
+        width: 80%;
+        max-width: 1200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 0 40px;
+
+        .col {
+            width: 90%;
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .hero {
+        padding: 0 20px;
+
+        .col {
+            width: 100%;
+        }
     }
 }
 
@@ -256,8 +296,6 @@ Header Style
 
 .do-container {
     background-image: linear-gradient(to right, var(--black), var(--grey), var(--light-green));
-    padding-left: 5%;
-    padding-right: 5%;
     display: flex;
     gap: 4rem;
     justify-content: center;
@@ -272,38 +310,38 @@ Header Style
   }
   
   .col {
-    flex: 1;
-    padding: 20px;
-  }
+        flex: 1;
+        padding: 20px;
+    }
   .col-1{
-    margin-top: 70px;
-    align-items: center;
-    justify-content: center;
+        margin-top: 70px;
+        align-items: center;
+        justify-content: center;
 
-    .head h1{
-        padding-bottom: 10px;
-        font-size: 5rem;
-    }
+        .head h1{
+            padding-bottom: 10px;
+            font-size: 5rem;
+        }
 
-    p{
-        font-size: 2rem;
-        padding-bottom: 10px;
+        p{
+            font-size: 2rem;
+            padding-bottom: 10px;
+        }
     }
-}
   
   .col-2 {
-    display: flex;
-    margin-top: 10px;
-    flex-direction: row;
-    border-radius: 40px;
-    background-color: var(--white);
-    justify-content: space-between;
-    box-shadow: var(--box-shadow-hover);
+        display: flex;
+        margin-top: 10px;
+        flex-direction: row;
+        border-radius: 40px;
+        background-color: var(--white);
+        justify-content: space-between;
+        box-shadow: var(--box-shadow-hover);
 
-    &:hover{
-        box-shadow: rgba(0,0,0,0.8);
+        &:hover{
+            box-shadow: rgba(0,0,0,0.8);
+        }
     }
-  }
 
   .col1{
     display: flex;
@@ -334,24 +372,24 @@ Header Style
     }
 /* Why Choose us style Ends */
 
-
+  
 /* About Us */
 #brand-head {
     display: flex;
     align-items: center;
-    height: 80vh;
-    margin: 5% 5%;
+    border-bottom: 2px solid var(--light-green);
 
     img {
         width: 50%;
         height: auto;
         border-radius: 20px;
-        border: 2px inset var(--blue);
+        border: 1px inset var(--cyan);
         box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .4);
         transition: all 0.5s ease-in-out;
 
         &:hover {
-            box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .8);
+            box-shadow: var(--box-shadow-hover);
+            border: 2px inset var(--cyan);
         }
     }
 
@@ -362,27 +400,22 @@ Header Style
             color: var(--light-green);
         }
 
+        p:first-child {
+            margin-bottom: 15px; 
+            display: block; /* Ensure it's treated as a block element */
+        }
+
         p {
-            color: var(--cyan);
+            color: var(--black);
             font-size: 1.7rem;
-            line-height: 2rem;
-            font-weight: 400;
-            margin-bottom: 15px;
         }
     }
 }
 
 /* About Us */
 
-
-
-
 /* Services And Products */
 .container {
-    padding: 5% 8%;
-    /* background:url(images/blur-background.jpg); */
-    background-size: cover;
-    background-position: top 60% right 0;
 
     .service-container {
         display: flex;
@@ -412,25 +445,30 @@ Header Style
 
                 h1 {
                     font-size: 2rem;
-                    color: var(--green);
+                    color: var(--black);
                     text-align: left;
+                    font-weight: 400;
                 }
 
                 i {
-                    font-size: 1.5rem;
+                    font-size: 2rem;
                     color: var(--light-green);
                 }
             }
         }
+        
 
         .image {
             position: relative;
             width: 50%;
-            max-width: 500px; 
+            max-width: 500px;
+            height: 300px; 
 
             img {
                 width: 100%;
-                height: auto;
+                height: 100%; 
+                object-fit: cover; 
+                background-position: right bottom;
                 display: block;
                 border-radius: 10px;
             }
@@ -451,12 +489,14 @@ Header Style
                 background-color:rgb(66, 169, 2,0.8);
                 }
 
-                h3 {
+                h2 {
                     font-size: 2rem;
+                    color: var(--white);
                 }
 
                 p {
                     font-size: 1.5rem;
+                    color: var(--white);
                 }
             }
         }
@@ -487,13 +527,15 @@ Header Style
 
                 ul{
                     list-style-type: circle;
+                    color: var(--light-green);
 
                     li{
                         font-size: 2rem;
-                        color: var(--green);
+                        color: var(--black);
+                        text-align: left;
+                        font-weight: 400;  
                     }
                 }
-
             }
         }
         button{
@@ -528,19 +570,153 @@ Header Style
                 background-color:rgb(66, 169, 2,0.8);
                 }
 
-                h3 {
+                h2 {
                     font-size: 2rem;
+                    color: var(--white);
                 }
 
                 p {
                     font-size: 1.5rem;
+                    color: var(--white);
                 }
             }
         }
     }
 }
 
+
+
 /* Services And Products */
+
+/* Invest Starts */
+.invest{
+    align-items: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)), url(images/blur-background.jpg) ;
+    background-position: left bottom  ;
+    background-repeat: no-repeat;
+    min-height: calc(100vh- 30vh);
+
+    .invest-content {
+        /* padding: 2em; */
+
+        h1 {
+            .green {
+                color: var(--light-green);
+            }
+            .blue {
+                color: var(--cyan);
+            }
+        }
+        p .green {
+            color: var(--light-green);
+            /* font-size: 2rem;
+            font-weight: 700;
+            text-transform: uppercase; */
+        }
+
+        p {
+            font-size: 1.8rem;
+            color: var(--white);
+        }
+
+        a {
+            display: inline-block;
+            font-weight: 700;
+            font-size: 1.6rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            padding: 0.8em 2em;
+            border: 2px solid var(--light-green);
+            border-radius: 10px;
+            background-color: var(--light-green);
+            color: var(--white);
+            transition: all 0.3s ease-in-out;
+            text-decoration: none;
+
+            &:hover {
+                background-color: var(--white);
+                color: var(--light-green);
+                border-color: var(--cyan);
+                box-shadow: var(--box-shadow-hover);
+            }
+        }
+    }
+   
+}
+/* Invest Ends */
+
+
+/* Projects Style */
+  
+.projects {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+  }
+  
+  .projects__title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .projects__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    gap: 2rem;
+  }
+  
+  /* card */
+  .project-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--card-radius);
+    box-shadow: 0 4px 12px var(--card-shadow);
+    background: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 24px var(--card-shadow);
+  }
+  
+  .project-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  /* overlay content */
+  .project-card__content {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: calc(100% - 2rem);
+    background: #fff;
+    padding: 1.5rem;
+    box-shadow: 0 -2px 8px var(--card-shadow);
+    border-radius: 0 0 var(--card-radius) var(--card-radius);
+    text-align: left;
+  }
+  
+  .project-card__heading {
+    margin: 0 0 0.5rem;
+    font-size: 1.5rem;
+    color: var(--light-green);
+  }
+  
+  .project-card__details {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    color: var(--black);
+  }
+
+
+/* Projects Style */
+
 
 
 /* 
@@ -557,7 +733,7 @@ Service Page Style
     width: 100%;
     background-size: cover;
     filter: blur(0.5px);
-    background-position: top 40% right 0;
+    background-position: center;
     padding: 0 80px;
     display: flex;
     flex-direction: column;
@@ -565,29 +741,31 @@ Service Page Style
     justify-content: center;
 
     .col{
-        width: 50%;
+        width: 80%;
+        max-width: 1200px;
     }
 }
 
 /* Service Hero style Ends */
 
 .service{
-    padding-top: 5%;
     background-color: rgba(153, 204, 51, 0.822);
-    height: 80vh;
+    height: auto;
 
     .heading{
-        font-weight: 700;
+        /* font-weight: 700; */
         font-size: clamp(20px, 5vw, 40px);
         text-align: center;
-        text-transform: capitalize;
-        margin-bottom: 20px;
+        /* text-transform: capitalize;
+        margin-bottom: 20px; */
     }
 
     .service-cards{
        display: flex;
        align-items: center;
        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2rem;
        
 
        .single-service{
@@ -601,6 +779,8 @@ Service Page Style
             background-color: white;
             border-radius: 20px;
             box-shadow: var(--box-shadow);
+            padding: 2rem;
+            width: clamp(250px, 30%, 350px);
 
             &:hover {
                 transition: transform 0.5s ease-in-out;
@@ -622,7 +802,7 @@ Service Page Style
             }
 
             i{
-                margin: 2em;
+                /* margin: 2em; */
                 font-size: 2rem;
                 color: var(--green);
             }
@@ -631,7 +811,7 @@ Service Page Style
                 font-size: 1.1rem;
                 width: 80%;
                 text-align: center;
-                margin-bottom: 2em;
+                /* margin-bottom: 2em; */
                 color: var(--green);
             }
         }
@@ -643,6 +823,69 @@ Service Page Style
         }
     }
 }
+
+/* .service-cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    .single-service {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-inline: 1em;
+        color: var(--cyan);
+        margin-top: 2em;
+        background-color: white;
+        border-radius: 20px;
+        box-shadow: var(--box-shadow);
+        padding: 2rem;
+        width: clamp(250px, 30%, 350px);
+
+        &:hover {
+            transition: transform 0.5s ease-in-out;
+            box-shadow: var(--box-shadow-hover);
+            background-color: rgba(0, 153, 153, 0.589);
+            border: 2px solid var(--light-green);
+
+            &:hover {
+                transform: translateY(-10px);
+            }
+        }
+
+        .service-heading {
+            font-weight: 900;
+            color: var(--light-green);
+            margin-top: 1em;
+            text-transform: capitalize;
+            font-size: clamp(1.6rem, 2.5vw, 2rem);
+            text-align: center;
+        }
+
+        i {
+            font-size: clamp(2rem, 3vw, 3rem);
+            color: var(--green);
+            margin: 1rem 0;
+        }
+
+        .service-details {
+            font-size: clamp(1.2rem, 2vw, 1.5rem);
+            width: 80%;
+            text-align: center;
+            color: var(--green);
+            display: block;
+        }
+    }
+
+    .single-service:hover .service-heading,
+    .single-service:hover i,
+    .single-service:hover .service-details {
+        color: var(--white);
+    }
+} */
 
 
 /* Products style */
@@ -759,7 +1002,7 @@ Contact Page Style
     width: 100%;
     background-size: cover;
     filter: blur(0.5px);
-    background-position: top 40% right 0;
+    background-position: center;
     padding: 0 80px;
     display: flex;
     flex-direction: column;
@@ -767,7 +1010,8 @@ Contact Page Style
     justify-content: center;
 
     .col{
-        width: 50%;
+        width: 80%;
+        max-width: 1200px;
     }
 }
 
@@ -1069,6 +1313,11 @@ Contact Page Style
 }
 
 @media (max-width: 768px) {
+
+    html {
+        font-size: 55%;
+    }
+
     /* About us */
     #brand-head {
         flex-direction: column;
@@ -1103,7 +1352,6 @@ Contact Page Style
 
     
 }
-
 
 @media (max-width:600px){
     html{
@@ -1170,6 +1418,15 @@ Contact Page Style
 
 
 @media (max-width:425px){
+
+    html {
+        font-size: 50%;
+    }
+
+    .header{
+    padding: 5px 20px;
+
+    }
 
     /* About Us */
     #brand-head {
