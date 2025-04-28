@@ -11,6 +11,9 @@
     <!-- fontawesome link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
+    <!-- Link Swiper's CSS -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
 </head>
 <body>
     <!-- Header Starts -->
@@ -45,15 +48,45 @@
     <!-- Header Ends -->
 
 
-    <!-- Hero Starts Ends -->
-    <section id="hero" class="hero">
-        <div class="col">
-            <h1 class="heading">powering up areas through solar panels</h1>
-            <h4 class="sub-heading">Lorem ipsum dolor sit amet consectetur.</h4>
-            <a href="" class="btn">Get Started!<i class="fa fa-caret-right"></i></a>
+    <!-- Hero Starts  -->
+
+      <!-- Swiper -->
+      <section class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide hero">
+            <img src="images/home.jpg" alt="">
+            <div class="col">
+              <h1 class="heading">powering up areas through solar panels</h1>
+              <h4 class="sub-heading">Lorem ipsum dolor sit amet consectetur.</h4>
+              <a href="" class="btn">Get Started!<i class="fa fa-caret-right"></i></a>
+          </div>
+          </div>
+
+          <div class="swiper-slide hero">
+            <img src="images/background.jpg" alt="">
+            <div class="col">
+              <h1 class="heading">Lorem ipsum dolor sit amet consectetur.</h1>
+              <h4 class="sub-heading">Lorem ipsum dolor sit amet consectetur.</h4>
+              <a href="" class="btn">Get Started!<i class="fa fa-caret-right"></i></a>
+            </div>
+          </div>
+
+          <div class="swiper-slide hero">
+            <img src="images/product.jpg" alt="">
+            <div class="col">
+              <h1 class="heading">Lorem ipsum dolor sit amet consectetur adipisicing. </h1>
+              <h4 class="sub-heading">Lorem ipsum dolor sit amet consectetur.</h4>
+              <a href="" class="btn">Get Started!<i class="fa fa-caret-right"></i></a>
+            </div>
+          </div>
         </div>
-    </section>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </section>
+
     <!-- Hero Ends -->
+
 
 
     <!-- About Us -->
@@ -264,6 +297,28 @@
       <script src="script.js"></script>
     <!-- Script Link -->
     
+    <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
     
 </body>
 </html>
