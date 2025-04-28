@@ -37,7 +37,10 @@ html{
 	}
 }
 
-
+img{
+    max-width: 100%;
+    object-fit: cover;
+}
 
 h1{
     font-style: bold;
@@ -61,10 +64,13 @@ p{
 }
 
 
-section{
+section, .section{
     padding: 7rem 5%;
 }
 
+.row{
+    display: flex;
+}
 
 .heading{
     color: var(--white);
@@ -135,7 +141,9 @@ section{
     z-index: 999;
     width: 100%;
     top: 0; left: 0;
-    box-shadow:0 .5rem 1rem rgba(0,0,0,0.06);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: var(--box-shadow);
     padding: 20px 60px;
 }
 .header .logo-container {
@@ -270,32 +278,14 @@ Header Style
     }
 }
 
-@media (max-width: 768px) {
-    .hero {
-        padding: 0 40px;
 
-        .col {
-            width: 90%;
-        }
-    }
-}
-
-@media (max-width: 425px) {
-    .hero {
-        padding: 0 20px;
-
-        .col {
-            width: 100%;
-        }
-    }
-}
 
 /* Hero style Ends */
 
 /* Why Choose us style Starts */
 
 .do-container {
-    background-image: linear-gradient(to right, var(--black), var(--grey), var(--light-green));
+    background-image: linear-gradient(to right, var(--grey), var(--cyan), var(--light-green));
     display: flex;
     gap: 4rem;
     justify-content: center;
@@ -414,10 +404,10 @@ Header Style
 
 /* About Us */
 
-/* Services And Products */
+/* Solutions And Products */
 .container {
 
-    .service-container {
+    .solution-container {
         display: flex;
         width: 100%;
         justify-content: space-between;
@@ -586,7 +576,7 @@ Header Style
 
 
 
-/* Services And Products */
+/* Solutions And Products */
 
 /* Invest Starts */
 .invest{
@@ -649,86 +639,266 @@ Header Style
 /* Projects Style */
   
 .projects {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 4rem 2rem;
-  }
-  
-  .projects__title {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-  }
-  
-  .projects__grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
-    gap: 2rem;
-  }
-  
-  /* card */
-  .project-card {
-    position: relative;
-    overflow: hidden;
-    border-radius: var(--card-radius);
-    box-shadow: 0 4px 12px var(--card-shadow);
-    background: #fff;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .project-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 8px 24px var(--card-shadow);
-  }
-  
-  .project-card img {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
-  
-  /* overlay content */
-  .project-card__content {
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    transform: translateX(-50%);
-    width: calc(100% - 2rem);
-    background: #fff;
-    padding: 1.5rem;
-    box-shadow: 0 -2px 8px var(--card-shadow);
-    border-radius: 0 0 var(--card-radius) var(--card-radius);
-    text-align: left;
-  }
-  
-  .project-card__heading {
-    margin: 0 0 0.5rem;
-    font-size: 1.5rem;
-    color: var(--light-green);
-  }
-  
-  .project-card__details {
-    margin: 0;
-    font-size: 0.95rem;
-    line-height: 1.4;
-    color: var(--black);
-  }
+    background-color: whitesmoke;
+
+    .heading {
+        text-align: center;
+        color: var(--light-green);
+        margin-bottom: 3rem;
+    }
+
+    .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+        gap: 2rem;
+
+        .project-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px ;
+            box-shadow: var(--box-shadow);
+            background: var(--white);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+           &:hover {
+                transform: translateY(-8px);
+                box-shadow: var(--box-shadow-hover);
+            }
+
+            img {
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+
+            .project-card-content {
+                position: absolute;
+                left: 50%;
+                bottom: 1%;
+                transform: translateX(-50%);
+                width: calc(100% - 10rem);
+                background: var(--white);
+                padding: 1rem 0;
+                box-shadow: var(--box-shadow);
+                border: 5px inset var(--cyan);
+                border-radius: 15px ;
+                text-align: center;
+            }
 
 
+            /* .project-card-details {
+                font-size: 0.95rem;
+                line-height: 1.4;
+                color: var(--black);
+
+                
+            } */
+            .project-heading {
+                font-size: 2rem;
+                color: var(--light-green);
+            }
+
+            .project-sub-heading {
+                font-size: 1.5rem;
+                color: var(--light-green);
+                text-transform: capitalize;
+            }
+        }
+    }
+}
+  
 /* Projects Style */
+
+
+
+/* Footer Starts */
+footer {
+    background-color: rgba(128, 128, 128, 0.153);
+    padding: 3rem 5%;
+    color: var(--light-green);
+}
+
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer > * {
+    flex: 1 1 20rem;
+    margin-bottom: 2rem;
+}
+
+.footer .logo img {
+    width: 200px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.footer p {
+    font-weight: 400;
+    font-size: 1.4rem;
+    color: var(--light-green);
+    line-height: 2rem;
+}
+
+footer h4 {
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--cyan);
+    margin-bottom: 1.5rem;
+    text-transform: capitalize;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer li a {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--grey);
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+        color: var(--cyan);
+        text-decoration: underline;
+    }
+}
+
+footer li + li {
+    margin-top: 1rem;
+}
+
+.footer-input {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border: 2px solid var(--light-green);
+    padding: 0.8rem;
+    border-radius: 5px;
+    background-color: var(--white);
+}
+
+.footer-input input {
+    flex: 1;
+    padding: 0.8rem;
+    border: none;
+    outline: none;
+    font-size: 1.4rem;
+    color: var(--black);
+    background-color: transparent;
+}
+
+.footer-input input::placeholder {
+    color: var(--grey);
+    font-weight: 400;
+}
+
+.footer-input button {
+    padding: 0.8rem 1.5rem;
+    background-color: var(--light-green);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover {
+        background-color: var(--cyan);
+        box-shadow: var(--box-shadow);
+        transform: scale(1.1);
+        transition: transform 0.3s ease-in-out;
+    }
+}
+
+
+
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.social a {
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;
+    font-size: 2rem;
+    background: var(--grey);
+    color: var(--white);
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.social a:hover {
+    background-color: var(--light-green);
+    transform: scale(1.1);
+}
+
+.copyright {
+    font-weight: 400;
+    font-size: 1.4rem;
+    margin-top: 2rem;
+    color: var(--grey);
+    text-align: center;
+}
+
+.copyright a {
+    color: var(--light-green);
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: color 0.3s ease-in-out;
+}
+
+.copyright a:hover {
+    color: var(--cyan);
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer > * {
+        flex: 1 1 100%;
+    }
+
+    .footer-input {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .social {
+        justify-content: center;
+    }
+}
+
+/* Footer Ends */
+
 
 
 
 /* 
 ---------------------------------------------
-Service Page Style
+Solution Page Style
 --------------------------------------------- 
 */
 
-/* Service Hero Style Starts */
+/* Solution Hero Style Starts */
 
-.service-hero{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/Service.jpg);
+.solution-hero{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/Solution.jpg);
     height: 100vh;
     width: 100%;
     background-size: cover;
@@ -746,35 +916,31 @@ Service Page Style
     }
 }
 
-/* Service Hero style Ends */
+/* Solution Hero style Ends */
 
-.service{
-    background-color: rgba(153, 204, 51, 0.822);
+.solution{
+    /* background-color: rgba(153, 204, 51, 0.822); */
+    background-color: var(--light-green);
     height: auto;
 
     .heading{
-        /* font-weight: 700; */
         font-size: clamp(20px, 5vw, 40px);
         text-align: center;
-        /* text-transform: capitalize;
-        margin-bottom: 20px; */
     }
 
-    .service-cards{
+    .solution-cards{
        display: flex;
        align-items: center;
        justify-content: center;
         flex-wrap: wrap;
         gap: 2rem;
-       
 
-       .single-service{
+       .single-solution{
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             margin-inline: 1em;
-            color: var(--cyan);
             margin-top: 2em;
             background-color: white;
             border-radius: 20px;
@@ -785,7 +951,8 @@ Service Page Style
             &:hover {
                 transition: transform 0.5s ease-in-out;
                 box-shadow: var(--box-shadow-hover);
-                background-color: rgba(0, 153, 153, 0.589);
+                background-color: rgb(3, 81, 153);
+                /* background-color: var(--cyan); */
                 border: 2px solid var(--light-green);
         
                 &:hover{
@@ -793,99 +960,36 @@ Service Page Style
                 }
             }
 
-            .service-heading{
+            .solution-heading{
                 font-weight: 900;
                 color: var(--light-green);
-                margin-top: 1em;
+                text-align: center;
                 text-transform: capitalize;
                 font-size: clamp(20px, 5vw, 1);
             }
 
             i{
-                /* margin: 2em; */
-                font-size: 2rem;
-                color: var(--green);
+                margin: 1em;
+                font-size: 3rem;
+                color: var(--cyan);
             }
             
-            .service-details{
+            .solution-details{
                 font-size: 1.1rem;
-                width: 80%;
+                width: 90%;
                 text-align: center;
-                /* margin-bottom: 2em; */
-                color: var(--green);
+                color: var(--cyan);
             }
         }
 
-        .single-service:hover .service-heading,
-        .single-service:hover i, 
-        .single-service:hover .service-details {
+        .single-solution:hover .solution-heading,
+        .single-solution:hover i, 
+        .single-solution:hover .solution-details {
             color: var(--white);
         }
     }
 }
 
-/* .service-cards {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 2rem;
-
-    .single-service {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-inline: 1em;
-        color: var(--cyan);
-        margin-top: 2em;
-        background-color: white;
-        border-radius: 20px;
-        box-shadow: var(--box-shadow);
-        padding: 2rem;
-        width: clamp(250px, 30%, 350px);
-
-        &:hover {
-            transition: transform 0.5s ease-in-out;
-            box-shadow: var(--box-shadow-hover);
-            background-color: rgba(0, 153, 153, 0.589);
-            border: 2px solid var(--light-green);
-
-            &:hover {
-                transform: translateY(-10px);
-            }
-        }
-
-        .service-heading {
-            font-weight: 900;
-            color: var(--light-green);
-            margin-top: 1em;
-            text-transform: capitalize;
-            font-size: clamp(1.6rem, 2.5vw, 2rem);
-            text-align: center;
-        }
-
-        i {
-            font-size: clamp(2rem, 3vw, 3rem);
-            color: var(--green);
-            margin: 1rem 0;
-        }
-
-        .service-details {
-            font-size: clamp(1.2rem, 2vw, 1.5rem);
-            width: 80%;
-            text-align: center;
-            color: var(--green);
-            display: block;
-        }
-    }
-
-    .single-service:hover .service-heading,
-    .single-service:hover i,
-    .single-service:hover .service-details {
-        color: var(--white);
-    }
-} */
 
 
 /* Products style */
@@ -979,7 +1083,7 @@ Service Page Style
 
 /* 
 ---------------------------------------------
-Service Page Style
+Solution Page Style
 --------------------------------------------- 
 */
 
@@ -1253,17 +1357,27 @@ Contact Page Style
         cursor: pointer;
     }
 
+    .icons div{
+        i{
+            height: 3.5rem;
+            width: 3.5rem;
+            line-height: 5rem;
+            font-size: 2.5rem;
+            
+        }
+    }
+
 
 
     /* ---------------------------
-   Service Page
+   Solution Page
     --------------------------------*/
-    .service{
+    .solution{
         height: auto;
     }
 
         /* ---------------------------
-   Service Page
+   Solution Page
     --------------------------------*/
 
 
@@ -1303,19 +1417,19 @@ Contact Page Style
   --------------------------------*/
 }
 
-@media (max-width:900px){
- 
- /* Products */
- .electric-product-container{
-    flex-wrap: wrap;
-    }
- /* Products */
-}
-
 @media (max-width: 768px) {
 
     html {
         font-size: 55%;
+    }
+
+
+    .hero {
+        padding: 0 40px;
+
+        .col {
+            width: 90%;
+        }
     }
 
     /* About us */
@@ -1341,13 +1455,13 @@ Contact Page Style
     /* About Us */
 
 
-    /* Service page */
-       .service-cards{
+    /* Solution page */
+       .solution-cards{
         display: flex;
         flex-direction: column;
         margin-inline: 5%;
     }
-    /* Service page */
+    /* Solution page */
 
 
     
@@ -1375,11 +1489,11 @@ Contact Page Style
     /* What we do*/
 
 
-    /* Service and Product style */
+    /* Solution and Product style */
     .container {
         padding-inline: auto ;
 
-        .service-container {
+        .Solution-container {
             flex-direction: column;
             .content {
                 width: 100%; 
@@ -1426,6 +1540,14 @@ Contact Page Style
     .header{
     padding: 5px 20px;
 
+    }
+
+    .hero {
+        padding: 0 20px;
+
+        .col {
+            width: 100%;
+        }
     }
 
     /* About Us */
