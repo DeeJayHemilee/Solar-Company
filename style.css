@@ -1294,6 +1294,7 @@ Contact Page Style
 
 
 @media (max-width:991px){
+   
 
     #navbar {
         display: flex;
@@ -1359,6 +1360,16 @@ Contact Page Style
         }
     }
 
+   /* Hero Style */
+    .hero {
+        height: auto;
+        .col {
+            width: 90%;
+            bottom: 5%;
+        }
+    }
+   /* Hero Style */
+
    /* About us */
    #brand-head {
         flex-direction: column;
@@ -1406,6 +1417,62 @@ Contact Page Style
         }
     }
     /* Project Style */
+
+    
+      /* What we do*/
+      .do-container .row {
+        display: block !important; 
+        padding: 0 10%;
+      }
+  
+      .col-2{
+          display: block !important;
+          margin-bottom: 20px;
+  
+          .col1 .head{
+              margin-top: 10px;
+          }
+      }
+      /* What we do*/
+
+    /* Solution and Product style */
+    .container {
+        padding-inline: auto ;
+
+        .solution-container {
+            flex-direction: column;
+            .content {
+                width: 100%; 
+            }
+
+            .image{
+                display: block;
+                width: 100%;
+                max-width: 500px;
+                margin-top: 20px;
+            }
+        }
+
+        /* .product-container {
+            flex-direction: column;
+
+            .heading2{
+                font-size: 2.5rem;
+                text-align: left;
+            }
+            .content {
+                width: 100%; 
+            }
+
+            .image{
+                display: block;
+                width: 100%;
+                max-width: 500px;
+                margin-bottom: 20px;
+            }
+        } */
+    }
+    /* Solution and Product style */
 
 
     /* ---------------------------
@@ -1523,62 +1590,6 @@ Contact Page Style
     }
     /* About Us */
 
-
-      /* What we do*/
-      .do-container .row {
-        display: block !important; 
-        padding: 0 10%;
-      }
-  
-      .col-2{
-          display: block !important;
-          margin-bottom: 20px;
-  
-          .col1 .head{
-              margin-top: 10px;
-          }
-      }
-      /* What we do*/
-  
-  
-      /* Solution and Product style */
-      .container {
-          padding-inline: auto ;
-  
-          .solution-container {
-              flex-direction: column;
-              .content {
-                  width: 100%; 
-              }
-  
-              .image{
-                  display: block;
-                  width: 100%;
-                  max-width: 500px;
-                  margin-top: 20px;
-              }
-          }
-  
-          /* .product-container {
-              flex-direction: column;
-  
-              .heading2{
-                  font-size: 2.5rem;
-                  text-align: left;
-              }
-              .content {
-                  width: 100%; 
-              }
-  
-              .image{
-                  display: block;
-                  width: 100%;
-                  max-width: 500px;
-                  margin-bottom: 20px;
-              }
-          } */
-      }
-      /* Solution and Product style */
 
     /* Solution page */
     .solution-cards{
@@ -1710,26 +1721,14 @@ Contact Page Style
 
         .col {
             width: 100%;
-        }
+            bottom: 3%;
+
+        } 
     }
-
-    /* About Us */
-    #brand-head {
-        margin: 5% 2%;
-
-        img {
-            width: 100%;
-        }
-
-        div {
-            p {
-                font-size: 1.3rem;
-                line-height: 1.6rem;
-            }
-        }
-    }
-    /* About us */
 }
+        
+        
+    
 
 /* ---------------------------
     Media Query 
