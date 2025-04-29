@@ -276,14 +276,13 @@ Header Style
     justify-content: center;
     position: relative;
     overflow: hidden;
+    background-color: var(dark);
 
     img {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        filter: blur(0.5px);
-        background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9));
-        background-blend-mode: overlay;
+        filter:brightness(0.5);
     }
 
     .col {
@@ -1360,11 +1359,63 @@ Contact Page Style
         }
     }
 
+   /* About us */
+   #brand-head {
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+
+        img {
+            width: 80%;
+            margin-bottom: 20px;
+        }
+
+        div {
+            padding-left: 0;
+
+            p {
+                font-size: 1.5rem;
+                line-height: 1.8rem;
+            }
+        }
+    }
+    /* About Us */
+
+    /* Project Style */
+     .projects {
+        .projects-grid {
+            display: flex;
+            flex-direction: column;
+            .project-card {
+                .project-card-details {
+                    font-size: 14px;
+                    margin: 0;
+                }
+                .project-heading {
+                    font-size: 16px;
+                    font-weight: 900;
+                    color: var(--light-green);
+                }
+    
+                .project-sub-heading {
+                    font-size: 14px;
+                    color: var(--light-green);
+                    text-transform: capitalize;
+                }
+            }
+        }
+    }
+    /* Project Style */
 
 
     /* ---------------------------
    Solution Page
     --------------------------------*/
+
+    .solution-hero {
+        padding: 5%;
+    }
+
     .solution{
         height: auto;
     }
@@ -1378,7 +1429,9 @@ Contact Page Style
     /* ---------------------------
    Contact Page
     --------------------------------*/
-
+   .contact-hero {
+        padding: 5%;
+    }
   .contact-container{
    flex-direction: column;
    height: auto;
@@ -1409,6 +1462,7 @@ Contact Page Style
    Contact Page
   --------------------------------*/
 }
+ 
 
 @media (max-width: 768px) {
 
@@ -1440,7 +1494,7 @@ Contact Page Style
     }
 
     .hero {
-        height: 100vh;
+        height: auto;
         .col {
             width: 90%;
             bottom: 5%;
@@ -1470,6 +1524,62 @@ Contact Page Style
     /* About Us */
 
 
+      /* What we do*/
+      .do-container .row {
+        display: block !important; 
+        padding: 0 10%;
+      }
+  
+      .col-2{
+          display: block !important;
+          margin-bottom: 20px;
+  
+          .col1 .head{
+              margin-top: 10px;
+          }
+      }
+      /* What we do*/
+  
+  
+      /* Solution and Product style */
+      .container {
+          padding-inline: auto ;
+  
+          .solution-container {
+              flex-direction: column;
+              .content {
+                  width: 100%; 
+              }
+  
+              .image{
+                  display: block;
+                  width: 100%;
+                  max-width: 500px;
+                  margin-top: 20px;
+              }
+          }
+  
+          /* .product-container {
+              flex-direction: column;
+  
+              .heading2{
+                  font-size: 2.5rem;
+                  text-align: left;
+              }
+              .content {
+                  width: 100%; 
+              }
+  
+              .image{
+                  display: block;
+                  width: 100%;
+                  max-width: 500px;
+                  margin-bottom: 20px;
+              }
+          } */
+      }
+      /* Solution and Product style */
+
     /* Solution page */
     .solution-cards{
         display: flex;
@@ -1487,29 +1597,7 @@ Contact Page Style
 
     
 
-    /* Project Style */
-    .projects {
-        .projects-grid {
-            .project-card {
-                .project-card-details {
-                    font-size: 14px;
-                    margin: 0;
-                }
-                .project-heading {
-                    font-size: 16px;
-                    font-weight: 900;
-                    color: var(--light-green);
-                }
     
-                .project-sub-heading {
-                    font-size: 14px;
-                    color: var(--light-green);
-                    text-transform: capitalize;
-                }
-            }
-        }
-    }
-    /* Project Style */
 
 }
 
@@ -1517,6 +1605,31 @@ Contact Page Style
     html{
         font-size: 50%;
     } 
+
+
+    .heading{
+        font-size: 25px;
+        margin-bottom: .7rem;
+        line-height: 4rem;
+    }
+    
+    
+    .sub-heading{
+        font-size: 20px;
+        margin-bottom: .5rem;
+        line-height: 2.5rem;
+    }
+    /* Header Icons*/
+    .icons div{
+        i{
+            height: 2.5rem;
+            width: 3.5rem;
+            line-height: 4rem;
+            font-size: 3rem;
+        }
+    }
+    /* Header Icons*/
+
 
     /* What we do*/
     .do-container .row {
@@ -1572,33 +1685,10 @@ Contact Page Style
             }
         } */
     }
+    /* Solution and Product style */
     
-    /* Drone & Survey style */
 
-     /* Project Style */
-     .projects {
-        .projects-grid {
-            grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
-            .project-card {
-                .project-card-details {
-                    font-size: 14px;
-                    margin: 0;
-                }
-                .project-heading {
-                    font-size: 16px;
-                    font-weight: 900;
-                    color: var(--light-green);
-                }
     
-                .project-sub-heading {
-                    font-size: 14px;
-                    color: var(--light-green);
-                    text-transform: capitalize;
-                }
-            }
-        }
-    }
-    /* Project Style */
 }
 
 
@@ -1608,6 +1698,7 @@ Contact Page Style
         font-size: 50%;
     }
 
+    
     .header{
     padding: 5px 20px;
 
@@ -1615,7 +1706,7 @@ Contact Page Style
 
     .hero {
         padding: 0 20px;
-        height: 100vh;
+        height: auto;
 
         .col {
             width: 100%;
