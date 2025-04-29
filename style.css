@@ -14,6 +14,7 @@
     --black: rgb(51, 51, 51);
     --grey: rgb(153, 153, 153);
 	--white: #FFFFFF;
+    --border-radius: 20px;
     --box-shadow:0 .5rem 1rem rgba(0,0,0,0.2);
     --box-shadow-hover: 0 .5rem 1rem rgba(0,0,0,0.6);
 }
@@ -44,7 +45,8 @@ img{
 
 h1{
     font-style: bold;
-    line-height: 3rem;
+    line-height: 5rem;
+    font-size: 60px;
     font-weight: 900;
     font-family: 'Montserrat', sans-serif;
 }
@@ -53,19 +55,21 @@ h2{
     font-style: bold;
     line-height: 2.5rem;
     font-weight: 600;
+    font-size: 40px;
     font-family: 'Montserrat', sans-serif;
 }
 
 p{
     font-style: bold;
-    line-height: 2.5rem;
+    font-size: 18px;
+    line-height: 2rem;
     font-weight:400;
     font-family: 'Montserrat', sans-serif;
 }
 
 
 section, .section{
-    padding: 7rem 5%;
+    padding: 12rem 5%;
 }
 
 .row{
@@ -75,7 +79,6 @@ section, .section{
 .heading{
     color: var(--white);
     margin-bottom: 1rem;
-	font-size: 3rem;
     text-transform: uppercase;
 }
 
@@ -83,7 +86,7 @@ section, .section{
 .sub-heading{
     color: var(--light-green);
     margin-bottom: 1.5rem;
-	font-size: 2rem;
+    font-size: 20px;
     text-transform: capitalize;
 }
 
@@ -91,7 +94,7 @@ section, .section{
 .btn {
     display: inline-block;
     font-weight: 700;
-    font-size: 1.6rem;
+    font-size: 16px;
     text-transform: uppercase;
     letter-spacing: 0.2em;
     padding: 0.4em 0.9em;
@@ -129,7 +132,7 @@ section, .section{
 
 
 /* ----------------------------
-            Header Style
+ Header Style
 ----------------------------------- */
 .header{
     display: flex;
@@ -262,7 +265,7 @@ Header Style
 /* Hero Style Starts */
 
 .hero {
-    /* height: calc(100vh - 200px); */
+    padding: 0;
     height: 70vh;
     width: 100%;
     background-size: cover;
@@ -300,7 +303,7 @@ Header Style
 /* Why Choose us style Starts */
 
 .do-container {
-    background-image: linear-gradient(to right, var(--grey), var(--cyan), var(--light-green));
+    background-image: linear-gradient(to right, rgba(0, 153, 153, 0.384), rgba(0, 153, 153, 0.63), rgba(0, 153, 153, 0.726));
     display: flex;
     gap: 4rem;
     justify-content: center;
@@ -387,7 +390,7 @@ Header Style
     img {
         width: 50%;
         height: auto;
-        border-radius: 20px;
+        border-radius: var(--border-radius);
         border: 1px inset var(--cyan);
         box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .4);
         transition: all 0.5s ease-in-out;
@@ -405,14 +408,8 @@ Header Style
             color: var(--light-green);
         }
 
-        p:first-child {
-            margin-bottom: 15px; 
-            display: block; /* Ensure it's treated as a block element */
-        }
-
         p {
             color: var(--black);
-            font-size: 1.7rem;
         }
     }
 }
@@ -430,7 +427,6 @@ Header Style
         margin-bottom: 30px;
 
         .content {
-            /* display: block; */
             width: 50%; 
             cursor: pointer;
 
@@ -441,7 +437,7 @@ Header Style
 
             .line {
                 border: 1px solid var(--light-green);
-                border-radius: 10px;
+                border-radius: var(--border-radius);
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
@@ -475,7 +471,7 @@ Header Style
                 object-fit: cover; 
                 background-position: right bottom;
                 display: block;
-                border-radius: 10px;
+                border-radius: var(--border-radius);
             }
 
             .content {
@@ -486,7 +482,7 @@ Header Style
                 padding: 20px;
                 box-sizing: border-box;
                 background-color:rgb(66, 169, 2,0.4);
-                border-radius: 0 0 10px 10px;
+                border-radius: 0 0 20px 20px;
                 transition: .6s ease-out;
                 color: whitesmoke;
 
@@ -495,12 +491,10 @@ Header Style
                 }
 
                 h2 {
-                    font-size: 2rem;
                     color: var(--white);
                 }
 
                 p {
-                    font-size: 1.5rem;
                     color: var(--white);
                 }
             }
@@ -589,6 +583,7 @@ Header Style
     }
 }
 
+  
 
 
 /* Solutions And Products */
@@ -602,7 +597,6 @@ Header Style
     min-height: calc(100vh- 30vh);
 
     .invest-content {
-        /* padding: 2em; */
 
         h1 {
             .green {
@@ -614,14 +608,12 @@ Header Style
         }
         p .green {
             color: var(--light-green);
-            /* font-size: 2rem;
-            font-weight: 700;
-            text-transform: uppercase; */
+            padding-top: 1.5rem;
         }
 
         p {
-            font-size: 1.8rem;
             color: var(--white);
+            margin-bottom: 1rem;
         }
 
         a {
@@ -670,7 +662,7 @@ Header Style
         .project-card {
             position: relative;
             overflow: hidden;
-            border-radius: 20px ;
+            border-radius: var(--border-radius) ;
             box-shadow: var(--box-shadow);
             background: var(--white);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -695,26 +687,23 @@ Header Style
                 background: var(--white);
                 padding: 1rem 0;
                 box-shadow: var(--box-shadow);
-                border: 5px inset var(--cyan);
-                border-radius: 15px ;
+                border: 2px inset var(--cyan);
+                border-radius: var(--border-radius) ;
                 text-align: center;
             }
 
 
-            /* .project-card-details {
-                font-size: 0.95rem;
-                line-height: 1.4;
-                color: var(--black);
-
-                
-            } */
+            .project-card-details {
+                font-size: 16px;
+                margin: 0;
+            }
             .project-heading {
-                font-size: 2rem;
+                font-size: 20px;
                 color: var(--light-green);
             }
 
             .project-sub-heading {
-                font-size: 1.5rem;
+                font-size: 16px;
                 color: var(--light-green);
                 text-transform: capitalize;
             }
@@ -729,7 +718,6 @@ Header Style
 /* Footer Starts */
 footer {
     background-color: rgba(128, 128, 128, 0.153);
-    padding: 3rem 5%;
     color: var(--light-green);
 }
 
@@ -878,7 +866,7 @@ footer li + li {
 }
 
 /* Responsive Footer */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .footer {
         flex-direction: column;
         align-items: center;
@@ -934,12 +922,10 @@ Solution Page Style
 /* Solution Hero style Ends */
 
 .solution{
-    /* background-color: rgba(153, 204, 51, 0.822); */
     background-color: var(--light-green);
     height: auto;
 
     .heading{
-        font-size: clamp(20px, 5vw, 40px);
         text-align: center;
     }
 
@@ -958,16 +944,15 @@ Solution Page Style
             margin-inline: 1em;
             margin-top: 2em;
             background-color: white;
-            border-radius: 20px;
+            border-radius: var(--border-radius);
             box-shadow: var(--box-shadow);
             padding: 2rem;
-            width: clamp(250px, 30%, 350px);
+            width: clamp(250px, 70%, 350px);
 
             &:hover {
                 transition: transform 0.5s ease-in-out;
                 box-shadow: var(--box-shadow-hover);
                 background-color: rgb(3, 81, 153);
-                /* background-color: var(--cyan); */
                 border: 2px solid var(--light-green);
         
                 &:hover{
@@ -980,17 +965,17 @@ Solution Page Style
                 color: var(--light-green);
                 text-align: center;
                 text-transform: capitalize;
-                font-size: clamp(20px, 5vw, 1);
+                font-size: 18px;
             }
 
             i{
                 margin: 1em;
-                font-size: 3rem;
+                font-size: 18px;
                 color: var(--cyan);
             }
             
             .solution-details{
-                font-size: 1.1rem;
+                font-size: 16px;
                 width: 90%;
                 text-align: center;
                 color: var(--cyan);
@@ -1139,41 +1124,34 @@ Contact Page Style
 
 .contact-container{
     display: flex;
-    padding-left: 6%;
-    padding-right: 6%;
-    padding-top: 3%;
-    padding-bottom: 3%;
-    height: 100vh;
+    height: auto;
     background-color: var(--green);
     box-sizing: border-box;
+    gap: 3rem;
 
     .map {
         width: 50%;
-        border-top-left-radius: 20px;
-        border-bottom-left-radius: 20px;
-        margin: 0px 0px 10px 50px;
+        border-top-left-radius: var(--border-radius);
+        border-bottom-left-radius: var(--border-radius);
         background-color: var(--white);
-        padding: 10px;
 
         iframe {
             width: 100%;
             height: 100%;
-            border-top-left-radius: 20px;
-            border-bottom-left-radius: 20px;
+            border-top-left-radius: var(--border-radius);
+            border-bottom-left-radius: var(--border-radius);
         }
     }
 
     form#contact {
-        padding: 20px;
-        margin: 0px 50px 10px 0px;
         background-color: var(--white);
-        border-top-right-radius: 20px;
-        border-bottom-right-radius: 20px;
+        border-top-right-radius: var(--border-radius);
+        border-bottom-right-radius: var(--border-radius);
     
         input {
             width: 100%;
             height: 45px;
-            border-radius: 7px;
+            border-radius: var(--border-radius);
             background-color: transparent;
             border: 1px solid #b3dd9a;
             outline: none;
@@ -1224,7 +1202,7 @@ Contact Page Style
             max-height: 180px;
             min-height: 140px;
             height: 140px;
-            border-radius: 7px;
+            border-radius: var(--border-radius);
             background-color: transparent;
             border: 1px solid #b3dd9a;
             outline: none;
@@ -1250,7 +1228,7 @@ Contact Page Style
             color: #fff;
             text-transform: capitalize;
             padding: 12px 25px;
-            border-radius: 7px;
+            border-radius: var(--border-radius);
             letter-spacing: 0.25px;
             border: none;
             outline: none;
@@ -1437,13 +1415,35 @@ Contact Page Style
     html {
         font-size: 55%;
     }
+    .heading{
+        font-size: 35px;
+        margin-bottom: .7rem;
+        line-height: 4rem;
+    }
+    
+    
+    .sub-heading{
+        font-size: 20px;
+        margin-bottom: .5rem;
+        line-height: 2.5rem;
+    }
 
+    .btn {
+        font-size: 14px;
+        letter-spacing: 0.1em;
+        padding: 0.2em 0.5em;
+    
+        i{
+            padding-right: 16px;
+            font-size: 14px;
+        }
+    }
 
     .hero {
-        padding: 0 40px;
-
+        height: 100vh;
         .col {
             width: 90%;
+            bottom: 5%;
         }
     }
 
@@ -1471,15 +1471,46 @@ Contact Page Style
 
 
     /* Solution page */
-       .solution-cards{
+    .solution-cards{
         display: flex;
         flex-direction: column;
         margin-inline: 5%;
+
+        .single-solution{
+            width: 100%;
+            /* margin-inline: 0;     
+            max-width: none;  */
+        }
     }
+   
     /* Solution page */
 
-
     
+
+    /* Project Style */
+    .projects {
+        .projects-grid {
+            .project-card {
+                .project-card-details {
+                    font-size: 14px;
+                    margin: 0;
+                }
+                .project-heading {
+                    font-size: 16px;
+                    font-weight: 900;
+                    color: var(--light-green);
+                }
+    
+                .project-sub-heading {
+                    font-size: 14px;
+                    color: var(--light-green);
+                    text-transform: capitalize;
+                }
+            }
+        }
+    }
+    /* Project Style */
+
 }
 
 @media (max-width:600px){
@@ -1508,7 +1539,7 @@ Contact Page Style
     .container {
         padding-inline: auto ;
 
-        .Solution-container {
+        .solution-container {
             flex-direction: column;
             .content {
                 width: 100%; 
@@ -1522,7 +1553,7 @@ Contact Page Style
             }
         }
 
-        .product-container {
+        /* .product-container {
             flex-direction: column;
 
             .heading2{
@@ -1539,10 +1570,35 @@ Contact Page Style
                 max-width: 500px;
                 margin-bottom: 20px;
             }
-        }
+        } */
     }
     
     /* Drone & Survey style */
+
+     /* Project Style */
+     .projects {
+        .projects-grid {
+            grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
+            .project-card {
+                .project-card-details {
+                    font-size: 14px;
+                    margin: 0;
+                }
+                .project-heading {
+                    font-size: 16px;
+                    font-weight: 900;
+                    color: var(--light-green);
+                }
+    
+                .project-sub-heading {
+                    font-size: 14px;
+                    color: var(--light-green);
+                    text-transform: capitalize;
+                }
+            }
+        }
+    }
+    /* Project Style */
 }
 
 
@@ -1559,6 +1615,7 @@ Contact Page Style
 
     .hero {
         padding: 0 20px;
+        height: 100vh;
 
         .col {
             width: 100%;
@@ -1581,12 +1638,6 @@ Contact Page Style
         }
     }
     /* About us */
-    
-    /* Our Products */
-    .electric-product-container{
-        display: block !important;
-    }
-    /* Our Products */
 }
 
 /* ---------------------------
