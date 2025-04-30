@@ -1652,17 +1652,17 @@ Contact Page Style
     }
 
     
-/* Work Starts */
-.work{
-    height: 100vh;
-    background-position: center ;
+    /* Work Starts */
+    .work{
+        height: 100vh;
+        background-position: center ;
 
-    .work-content {
-        width: 90%;
+        .work-content {
+            width: 90%;
+        }
+    
     }
-   
-}
-/* Work Ends */
+    /* Work Ends */
    
     /* Solution page */
 
@@ -1776,22 +1776,57 @@ Contact Page Style
     padding: 5px 20px;
 
     }
+  /* Hero Style Starts */
+        .mySwiper,
+        .swiper-wrapper,
+        .swiper-slide {
+        height: 80vh !important;
+        }
+
+        .hero {
+            height: 80vh;
+        
+            img {
+                width: 100%;
+            }
+
+            .col {
+                bottom: 30%;
+            }
+        }
+
+        /* Hero style Ends */
 
     /* Header Icons*/
         .icons div{
             i{
-                height: 2rem;
-                width: 2rem;
-                line-height: 3rem;
-                font-size: 2.5rem;
+                height: 1rem;
+                width: 1rem;
+                line-height: 2rem;
+                font-size: 1.7rem;
             }
         }
     /* Header Icons*/
 
+    
+    /* Project Style */
+    .projects {
+        .projects-grid {
+            .project-card {
+                .project-heading {
+                    font-size: 12px;
+                }
+    
+                .project-sub-heading {
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+    /* Project Style */
+
 }
         
-        
-    
 
 /* ---------------------------
     Media Query 
