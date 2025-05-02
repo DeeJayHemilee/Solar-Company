@@ -81,14 +81,18 @@ section, .section{
 
 .heading{
     color: var(--white);
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     text-transform: uppercase;
+    
+    line-height: 1.2
 }
-
+br {
+    margin-bottom: 5rem;
+}
 
 .sub-heading{
     color: var(--light-green);
-    margin-bottom: 1.5rem;
+    margin-bottom:2.5rem;
     font-size: 20px;
     text-transform: capitalize;
 }
@@ -100,7 +104,7 @@ section, .section{
     font-size: 16px;
     text-transform: uppercase;
     letter-spacing: 0.2em;
-    padding: 0.4em 0.9em;
+    padding: 1em 0.9em;
     border: 2px solid var(--light-green);
     border-radius: 10px;
     background-color: var(--light-green);
