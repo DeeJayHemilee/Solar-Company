@@ -726,8 +726,8 @@ Header Style
 
 /* Footer Starts */
 .section {
-    padding-top: 100px;
-    padding-bottom: 40px;
+  padding-top: 100px;
+  padding-bottom: 40px;
 }
 footer {
   background-color: rgba(128, 128, 128, 0.153);
@@ -1594,6 +1594,7 @@ Contact Page Style
       padding-left: 0;
 
       p {
+        margin-top: 20px;
         font-size: 2rem;
         line-height: 1.8rem;
       }
@@ -1648,7 +1649,7 @@ Contact Page Style
   .icons div {
     i {
       height: 2.5rem;
-      width: 3.5rem;
+      width: 3rem;
       line-height: 4rem;
       font-size: 3rem;
     }
@@ -1717,10 +1718,11 @@ Contact Page Style
   }
   p {
     font-size: 16px;
+    
   }
 
   .header {
-    padding: 5px 20px;
+    padding: 5px 10px;
   }
   /* Hero Style Starts */
   .mySwiper,
@@ -1743,16 +1745,50 @@ Contact Page Style
 
   /* Hero style Ends */
 
-  /* Header Icons*/
+  /* Header */
+  .logo-container {
+    margin: -30px;
+  }
+  img {
+    padding: 10px;
+  }
+  .header .icons {
+    margin-left: -0px;
+  }
+  .icons div i.fas {
+    color: #0c0c0b;
+  }
+  /* .fas-bars {
+      color: #0c0c0b;
+  } */
+
   .icons div {
     i {
       height: 2rem;
       width: 2rem;
       line-height: 3rem;
       font-size: 2.5rem;
+      .fas-bars {
+        color: #0c0c0b;
+      }
     }
   }
   /* Header Icons*/
+
+  /* Invest */
+ .container {
+  padding: 50px 40px;
+ }
+
+/* About */
+#brand-head div p {
+  line-height: 20px;
+  padding: auto 50px;
+}
+
+  .do-container {
+    padding: 0.5rem;
+  }
 
   /* Project Style */
   .projects {
@@ -1766,10 +1802,25 @@ Contact Page Style
           font-size: 10px;
         }
       }
+      
     }
   }
+  .projects p {
+    font-size: 16px;
+    line-height: 3rem;
+  }
   /* Project Style */
+
+  /* Footer  */
+  .footer p {
+    font-size: 16px;
+  }
+  .four-Section p {
+margin: 20px;
+  }
 }
+
+
 
 /* ---------------------------
     Media Query 
