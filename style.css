@@ -725,6 +725,10 @@ Header Style
 /* Projects Style */
 
 /* Footer Starts */
+.section {
+    padding-top: 100px;
+    padding-bottom: 40px;
+}
 footer {
   background-color: rgba(128, 128, 128, 0.153);
   color: var(--light-green);
